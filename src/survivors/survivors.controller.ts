@@ -1,9 +1,23 @@
-import { Controller, Post, Get, Param, Body, Patch, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Get,
+  Param,
+  Body,
+  Patch,
+  Delete,
+} from '@nestjs/common';
 import { SurvivorsService } from './survivors.service';
 import { SurvivorDto } from './dto/survivor.dto';
 import { Survivor } from './survivors.model';
 import { UpdateLocationDto } from './dto/update-location.dto';
-import { ApiBody, ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  ApiBody,
+  ApiOperation,
+  ApiParam,
+  ApiResponse,
+  ApiTags,
+} from '@nestjs/swagger';
 
 @ApiTags('survivors')
 @Controller('survivors')
