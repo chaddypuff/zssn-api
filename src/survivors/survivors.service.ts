@@ -26,7 +26,11 @@ export class SurvivorsService {
   }
 
   async getAllSurvivors(): Promise<Survivor[]> {
-    return this.survivorModel.find().exec();
+    return this.survivorModel
+      .find()
+      .collation({ locale: 'en', strength: 2 })
+      .sort({ name: 1 })
+      .exec();
   }
 
   async updateLocation(
