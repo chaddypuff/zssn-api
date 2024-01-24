@@ -1,69 +1,40 @@
-<!DOCTYPE html>
-<html>
+# ZSSN API - Zombie Survival Social Network
 
-<body>
+## Description
 
-  <h1>ZSSN API - Zombie Survival Social Network</h1>
+ZSSN (Zombie Survival Social Network) is a REST API designed to help survivors in a post-apocalyptic world share resources. The API allows survivors to register, update their locations, list all survivors, and mark infected individuals.
 
-  <h2>Description</h2>
+## Technologies Used
 
-  <p>ZSSN (Zombie Survival Social Network) is a REST API designed to help survivors in a post-apocalyptic world share resources.
-    The API allows survivors to register, update their locations, list all survivors, and mark infected individuals.</p>
+- Node.js
+- Nest.js
+- MongoDB
+- Swagger (for API documentation)
+- ESLint (for linting)
 
-  <h2>Technologies Used</h2>
+## Getting Started
 
-  <ul>
-    <li>Node.js</li>
-    <li>Nest.js</li>
-    <li>MongoDB</li>
-    <li>Swagger (for API documentation)</li>
-    <li>ESLint (for linting)</li>
-  </ul>
+### Prerequisites
 
-  <h2>Getting Started</h2>
+- Node.js installed
+- MongoDB server running
 
-  <h3>Prerequisites</h3>
+### Installation
 
-  <ul>
-    <li>Node.js installed</li>
-    <li>MongoDB server running</li>
-  </ul>
+1. **Clone the repository:**
+   git clone https://github.com/chaddypuff/zssn-api.git
 
-  <h3>Installation</h3>
+2. **Navigate to the project folder:**
+cd zssn-api
 
-  <ol>
-    <li>Clone the repository:</li>
-    <code>git clone https://github.com/yourusername/zssn-api.git</code>
+3. **Install dependencies:**
+npm install
 
-    <li>Navigate to the project folder:</li>
-    <code>cd zssn-api</code>
+4. **Setup your DB in AppModule:**
+your_mongodb_connection_string
 
-    <li>Install dependencies:</li>
-    <code>npm install</code>
+### Usage
+1. **Start the server:**
+npm start
 
-    <li>Set up database:</li>
-    <ul>
-      <li>Add the following configuration:</li>
-    </ul>
-    <pre>your_mongodb_connection_string in AppModule</pre>
-  </ol>
-
-  <h3>Usage</h3>
-
-  <ol>
-    <li>Start the server:</li>
-    <code>npm start</code>
-
-    Open your browser and go to http://localhost:3000/api for Swagger API documentation.
-  </ol>
-
-  <h2>API Endpoints</h2>
-
-  <ul>
-    <li><strong>POST /survivors</strong>: Register a new survivor.</li>
-    <li><strong>GET /survivors</strong>: List all survivors.</li>
-    <li><strong>PATCH /survivors/:id/location</strong>: Update the location of a survivor.</li>
-    <li><strong>PATCH /survivors/:id/markInfected</strong>: Mark a survivor as infected.</li>
-    <li><strong>DELETE /survivors/:id</strong>: Delete a survivor.</li>
-  </ul>
-  </html>
+Open your browser and go to http://localhost:3000/api for Swagger API documentation.
